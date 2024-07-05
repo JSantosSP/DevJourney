@@ -1,0 +1,16 @@
+.Profile-container {
+    text-align: center;
+}
+
+.Profile-image {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.large-icon {
+    font-size: 32px;
+}

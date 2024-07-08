@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { PictureOutlined, HomeOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 
@@ -10,17 +10,23 @@ const items = [
     icon: <HomeOutlined />
   },
   {
-    label: 'API films',
+    label: <Link to="/apifilm">API films</Link>,
     key: 'films',
     icon: <PictureOutlined />
   }
 ];
 const NavBar = () => {
+  const location = useLocation();
   const [current, setCurrent] = useState('home');
-  const onClick = (e) => {
-    console.log('click ', e);
-    setCurrent(e.key);
-  };
-  return <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />;
+
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === '/') {
+      setCurrent('home');
+    } else if (path === '/apifilm') {
+      setCurrent('films');
+    }
+  }, [location.pathname]);
+  return <Menu selectedKeys={[current]} mode="horizontal" items={items} />;
 };
 export default NavBar;

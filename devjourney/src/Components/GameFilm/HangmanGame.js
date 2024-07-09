@@ -6,7 +6,7 @@ import './HangmanGame.css';
 const { Title } = Typography;
 const { Option } = Select;
 
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ '.split('');
 
 const HangmanGame = ({ word, wordList }) => {
   const [errors, setErrors] = useState(0);
@@ -51,7 +51,6 @@ const HangmanGame = ({ word, wordList }) => {
     if (inputValue === word.toUpperCase()) {
       setGuessedLetters([...new Set(word.toUpperCase().split(''))]); // Mark all letters as guessed
       setGameOver(true);
-      message.success('You guessed the word!');
     } else {
       setErrors(errors + 1);
     }
@@ -64,7 +63,6 @@ const HangmanGame = ({ word, wordList }) => {
     if (selectedWord.toLowerCase() === word.toLowerCase()) {
       setGuessedLetters([...new Set(word.toUpperCase().split(''))]); // Mark all letters as guessed
       setGameOver(true);
-      message.success('You guessed the word!');
     } else {
       setErrors(errors + 1);
     }

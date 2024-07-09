@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import HomePage from './Pages/Home/HomePage';
 import ProfilePage from './Pages/Profile/ProfilePage';
 import ApiFilm from './Pages/ApiFilm/ApiFilm'
+import ProjectDescription from './Pages/ApiFilm/ProjectDescription'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route exact path="/" element={<HomePage/>}/>
           <Route exact path="/contact" element={<ProfilePage/>}/>
           <Route exact path="/apifilm" element={<ApiFilm/>}/>
+          <Route exact path="/apifilm/description" element={<ProjectDescription/>}/>
         </Routes>
       </Router>
     </div>

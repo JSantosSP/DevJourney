@@ -1,6 +1,6 @@
 import React from 'react';
-
-const Hangman = ({ errors }) => {
+import './Hangman.css'
+const Hangman = ({ errors, image, see }) => {
   const renderPart = (part) => {
     const strokeColor = "black";
     const strokeWidth = 2;
@@ -32,9 +32,17 @@ const Hangman = ({ errors }) => {
   };
 
   return (
-    <svg height="250" width="200" className="hangman">
-      {Array.from({ length: errors }, (_, i) => renderPart(i + 1))}
-    </svg>
+    <div className="hangman-container">
+      {!see && (
+        <svg height="250" width="200" className="hangman-svg">
+          {Array.from({ length: errors }, (_, i) => renderPart(i + 1))}
+        </svg>
+      )}
+      {see && (
+        <img src={image} alt="Hangman" className="hangman-image" />
+      )}
+    </div>
+
   );
 };
 

@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { Input, Button, Row, Col, Divider, Select, Typography, message } from 'antd';
+import { Input, Button, Row, Col, Divider, Select, message } from 'antd';
 import Hangman from './Hangman';
 import './HangmanGame.css';
 
-const { Title } = Typography;
 const { Option } = Select;
 
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ '.split('');
 
-const HangmanGame = ({ word, wordList }) => {
+const HangmanGame = ({ word, wordList, image }) => {
   const [errors, setErrors] = useState(0);
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [clickedLetters, setClickedLetters] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [gameOver, setGameOver] = useState(false);
+  const [see, setSee] = useState(false);
 
   useEffect(() => {
     if (errors >= 10) {
       setGameOver(true);
       message.error(`You lost! The word was: ${word}`);
+      setSee(true)
     }
 
     const uniqueLetters = [...new Set(word.toUpperCase().split(''))];
@@ -27,6 +28,7 @@ const HangmanGame = ({ word, wordList }) => {
     if (allLettersGuessed) {
       setGameOver(true);
       message.success('You guessed the word!');
+      setSee(true)
     }
   }, [errors, guessedLetters, word]);
 
@@ -78,8 +80,7 @@ const HangmanGame = ({ word, wordList }) => {
 
   return (
     <div className="hangman-game">
-      <Title level={2}>Hangman Game</Title>
-      <Hangman errors={errors} />
+      <Hangman errors={errors} image={image} see={see} />
       <Divider />
       <div className="squares-container">
         {renderSquares()}

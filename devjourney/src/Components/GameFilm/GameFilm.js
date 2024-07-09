@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Spin, Alert } from 'antd';
 import api from '../../Utils/api';
+import HangmanGame from './HangmanGame';
 
 const GameFilm = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const wordList = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -33,6 +35,7 @@ const GameFilm = () => {
     <div>
       <h1>Data from API</h1>
       <pre>{JSON.stringify(data, null, 2)}</pre>
+      <HangmanGame word={"apple"} wordList={wordList}/>
     </div>
   );
 };

@@ -1,0 +1,22 @@
+.hangman-game {
+    text-align: center;
+  }
+  
+  .squares-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .square {
+    border: 1px solid #000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  

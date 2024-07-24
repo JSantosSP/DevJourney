@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/DevJourney/build/static/css/main.e5788bbf.css",
-    "main.js": "/DevJourney/build/static/js/main.6c993163.js",
-    "static/js/453.e366df86.chunk.js": "/DevJourney/build/static/js/453.e366df86.chunk.js",
-    "index.html": "/DevJourney/build/index.html",
-    "main.e5788bbf.css.map": "/DevJourney/build/static/css/main.e5788bbf.css.map",
-    "main.6c993163.js.map": "/DevJourney/build/static/js/main.6c993163.js.map",
-    "453.e366df86.chunk.js.map": "/DevJourney/build/static/js/453.e366df86.chunk.js.map"
+    "main.css": "/DevJourney/static/css/main.e5788bbf.css",
+    "main.js": "/DevJourney/static/js/main.70a50a8e.js",
+    "static/js/453.e366df86.chunk.js": "/DevJourney/static/js/453.e366df86.chunk.js",
+    "index.html": "/DevJourney/index.html",
+    "main.e5788bbf.css.map": "/DevJourney/static/css/main.e5788bbf.css.map",
+    "main.70a50a8e.js.map": "/DevJourney/static/js/main.70a50a8e.js.map",
+    "453.e366df86.chunk.js.map": "/DevJourney/static/js/453.e366df86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e5788bbf.css",
-    "static/js/main.6c993163.js"
+    "static/js/main.70a50a8e.js"
   ]
 }

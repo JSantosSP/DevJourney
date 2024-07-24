@@ -12,10 +12,10 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route exact path="/DevJourney/build" element={<HomePage/>}/>
-          <Route exact path="/DevJourney/build/contact" element={<ProfilePage/>}/>
-          <Route exact path="/DevJourney/build/apifilm" element={<ApiFilm/>}/>
-          <Route exact path="/DevJourney/build/apifilm/description" element={<ProjectDescription/>}/>
+          <Route exact path="/DevJourney" element={<HomePage/>}/>
+          <Route exact path="/DevJourney/contact" element={<ProfilePage/>}/>
+          <Route exact path="/DevJourney/apifilm" element={<ApiFilm/>}/>
+          <Route exact path="/DevJourney/apifilm/description" element={<ProjectDescription/>}/>
         </Routes>
       </Router>
     </div>

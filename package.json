@@ -2,7 +2,7 @@
   "name": "devjourney",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jsantossp.github.io/DevJourney/build",
+  "homepage": "https://jsantossp.github.io/DevJourney",
   "dependencies": {
     "@ant-design/icons": "^5.3.7",
     "@testing-library/jest-dom": "^5.17.0",

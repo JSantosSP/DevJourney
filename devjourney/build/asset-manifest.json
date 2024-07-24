@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/DevJourney/build/static/css/main.e5788bbf.css",
+    "main.js": "/DevJourney/build/static/js/main.bd32e921.js",
+    "static/js/453.e366df86.chunk.js": "/DevJourney/build/static/js/453.e366df86.chunk.js",
+    "index.html": "/DevJourney/build/index.html",
+    "main.e5788bbf.css.map": "/DevJourney/build/static/css/main.e5788bbf.css.map",
+    "main.bd32e921.js.map": "/DevJourney/build/static/js/main.bd32e921.js.map",
+    "453.e366df86.chunk.js.map": "/DevJourney/build/static/js/453.e366df86.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5788bbf.css",
+    "static/js/main.bd32e921.js"
+  ]
+}

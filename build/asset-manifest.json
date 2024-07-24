@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/DevJourney/static/css/main.e5788bbf.css",
-    "main.js": "/DevJourney/static/js/main.70a50a8e.js",
-    "static/js/453.e366df86.chunk.js": "/DevJourney/static/js/453.e366df86.chunk.js",
-    "index.html": "/DevJourney/index.html",
-    "main.e5788bbf.css.map": "/DevJourney/static/css/main.e5788bbf.css.map",
-    "main.70a50a8e.js.map": "/DevJourney/static/js/main.70a50a8e.js.map",
-    "453.e366df86.chunk.js.map": "/DevJourney/static/js/453.e366df86.chunk.js.map"
+    "main.css": "/build/static/css/main.e5788bbf.css",
+    "main.js": "/build/static/js/main.eb6c3c30.js",
+    "static/js/453.e366df86.chunk.js": "/build/static/js/453.e366df86.chunk.js",
+    "index.html": "/build/index.html",
+    "main.e5788bbf.css.map": "/build/static/css/main.e5788bbf.css.map",
+    "main.eb6c3c30.js.map": "/build/static/js/main.eb6c3c30.js.map",
+    "453.e366df86.chunk.js.map": "/build/static/js/453.e366df86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e5788bbf.css",
-    "static/js/main.70a50a8e.js"
+    "static/js/main.eb6c3c30.js"
   ]
 }

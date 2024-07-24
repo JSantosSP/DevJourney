@@ -61,7 +61,7 @@ const GameFilm = () => {
         Genres: {data.genero}</Paragraph>
       <HangmanGame word={data.original_title} wordList={wordList} image = {data.poster} />
       <Paragraph>
-        This project is a web-based Hangman game where users guess movie titles. The frontend, built with React, fetches movie data from a FastAPI backend, which interacts with a MySQL database. Key components include a Base layout, GameFilm for fetching and displaying data, HangmanGame for managing game logic, and Hangman for visualizing progress. The backend provides endpoints to retrieve random movies and related titles, enabling an interactive user experience with dynamic visual feedback and reload functionality.<br/><Link to='/DevJourney/apifilm/description'>More</Link>
+        This project is a web-based Hangman game where users guess movie titles. The frontend, built with React, fetches movie data from a FastAPI backend, which interacts with a MySQL database. Key components include a Base layout, GameFilm for fetching and displaying data, HangmanGame for managing game logic, and Hangman for visualizing progress. The backend provides endpoints to retrieve random movies and related titles, enabling an interactive user experience with dynamic visual feedback and reload functionality.<br/><Link to='/apifilm/description'>More</Link>
       </Paragraph>
       <Button onClick={handleReload}> New Film </Button>
     </div>

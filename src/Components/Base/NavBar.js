@@ -5,17 +5,17 @@ import { Menu } from 'antd';
 
 const items = [
   {
-    label: <Link to="/DevJourney">Home</Link>,
+    label: <Link to="/">Home</Link>,
     key: 'home',
     icon: <HomeOutlined />
   },
   {
-    label: <Link to="/DevJourney/apifilm">API films</Link>,
+    label: <Link to="/apifilm">API films</Link>,
     key: 'films',
     icon: <PictureOutlined />
   },
   {
-    label: <Link to="/DevJourney/contact">AboutMe</Link>,
+    label: <Link to="/contact">AboutMe</Link>,
     key: 'aboutme',
     icon: <UserOutlined />,
     style: { marginLeft: 'auto' } 
@@ -27,11 +27,11 @@ const NavBar = () => {
 
   useEffect(() => {
     const path = location.pathname;
-    if (path === '/DevJourney') {
+    if (path === '/') {
       setCurrent('home');
-    } else if (path === '/DevJourney/apifilm') {
+    } else if (path === '/apifilm') {
       setCurrent('films');
-    } else if (path === '/DevJourney/contact') {
+    } else if (path === '/contact') {
       setCurrent('aboutme');
     }
   }, [location.pathname]);

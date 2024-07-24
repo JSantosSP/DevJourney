@@ -11,7 +11,7 @@ const Base = ({ children }) => {
             <NavBar />
             <ParticleBackground/>
             <main>{children}</main>
-            <Link to="/DevJourney/contact"><ButtonCV/></Link>
+            <Link to="/contact"><ButtonCV/></Link>
         </div>
     );
 };

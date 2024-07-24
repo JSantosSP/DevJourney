@@ -5,7 +5,7 @@ import './HangmanGame.css';
 
 const { Option } = Select;
 
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ '.split('');
+const alphabet = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ '.split('');
 
 const HangmanGame = ({ word, wordList, image }) => {
   const [errors, setErrors] = useState(0);

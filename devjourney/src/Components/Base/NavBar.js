@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { PictureOutlined, HomeOutlined } from '@ant-design/icons';
+import { PictureOutlined, HomeOutlined, UserOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 
 const items = [
@@ -13,6 +13,12 @@ const items = [
     label: <Link to="/apifilm">API films</Link>,
     key: 'films',
     icon: <PictureOutlined />
+  },
+  {
+    label: <Link to="/contact">AboutMe</Link>,
+    key: 'aboutme',
+    icon: <UserOutlined />,
+    style: { marginLeft: 'auto' } 
   }
 ];
 const NavBar = () => {
@@ -25,6 +31,8 @@ const NavBar = () => {
       setCurrent('home');
     } else if (path === '/apifilm') {
       setCurrent('films');
+    } else if (path === '/contact') {
+      setCurrent('aboutme');
     }
   }, [location.pathname]);
   return <Menu selectedKeys={[current]} mode="horizontal" items={items} />;

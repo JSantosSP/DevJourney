@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Configuración de Axios
 const apiClient = axios.create({
-  baseURL: 'http://127.0.0.1:8000', 
+  baseURL: 'https://jsantossp.pythonanywhere.com/api', 
   headers: {
     'Content-Type': 'application/json',
   },

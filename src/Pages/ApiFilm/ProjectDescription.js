@@ -79,7 +79,7 @@ const ProjectDescription = () => {
             </Paragraph>
           </Card>
         </Content>
-        <Footer className="project-footer">Hangman Movie Game ©2024 Created by JSantosSP</Footer>
+        <Footer className="project-footer">Hangman Movie Game ©2024 Created by JSantosSP <a href='https://github.com/JSantosSP/API-Film'>Github</a></Footer>
       </Layout>
     </Base>
   );

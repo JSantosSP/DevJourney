@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { PictureOutlined, HomeOutlined, UserOutlined } from '@ant-design/icons';
+import { PictureOutlined, HomeOutlined, MobileOutlined, UserOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 
 const items = [
@@ -13,6 +13,11 @@ const items = [
     label: <Link to="/DevJourney/build/apifilm">API films</Link>,
     key: 'films',
     icon: <PictureOutlined />
+  },
+  {
+    label: <Link to="/DevJourney/build/rankapp">Rank App</Link>,
+    key: 'rankapp',
+    icon: <MobileOutlined />
   },
   {
     label: <Link to="/DevJourney/build/contact">AboutMe</Link>,
@@ -33,6 +38,9 @@ const NavBar = () => {
       setCurrent('films');
     } else if (path === '/DevJourney/build/contact') {
       setCurrent('aboutme');
+    }
+    else if (path === '/DevJourney/build/rankapp') {
+      setCurrent('rankapp');
     }
   }, [location.pathname]);
   return <Menu selectedKeys={[current]} mode="horizontal" items={items} />;

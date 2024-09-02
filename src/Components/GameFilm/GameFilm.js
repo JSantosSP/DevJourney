@@ -49,7 +49,7 @@ const GameFilm = () => {
 
   if (loading) return  <Spin size="large" />;
   if (error) return <Alert
-                        message="Error API"
+                        message="Error API Try again please"
                         description={error.message}
                         type="error"
                         />;

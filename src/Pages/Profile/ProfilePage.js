@@ -12,7 +12,7 @@ const ProfilePage = () => {
             <div className="Profile-container">
                 <Row justify="center" style={{ marginBottom: '20px' }}>
                     <Col>
-                        <Avatar size={150} src="/ruta/a/tu/imagen.jpg" />
+                        <Avatar size={150} src="/DevJourney/build/joseSantosBusto.jpeg" />
                     </Col>
                 </Row>
                 <Row justify="center">

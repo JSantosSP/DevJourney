@@ -54,6 +54,16 @@
   min-height: 1.4em;
 }
 
+.project-header .project-page-title {
+  display: block;
+  margin-bottom: 8px !important;
+}
+
+.project-header .project-page-subtitle {
+  margin-bottom: 0 !important;
+  margin-top: 4px;
+}
+
 .project-content {
   margin: 20px 20px 24px;
   padding: 0;
@@ -70,11 +80,7 @@
   overflow: hidden;
 }
 
-.project-card-main > .ant-card-body {
-  padding: 32px 40px 40px !important;
-  color: var(--project-text);
-}
-
+/* Tarjetas internas (ApiFilm, RankApp) */
 .project-card-main .ant-card {
   background: rgba(0, 0, 0, 0.2) !important;
   border: 1px solid var(--project-glass-border) !important;
@@ -84,6 +90,11 @@
 .project-card-main .ant-card .ant-card-head {
   color: var(--project-accent) !important;
   border-bottom: 1px solid var(--project-glass-border) !important;
+}
+
+.project-card-main > .ant-card-body {
+  padding: 32px 40px 40px !important;
+  color: var(--project-text);
 }
 
 .project-card-main .ant-card .ant-card-body {
@@ -131,6 +142,7 @@
   margin: 28px 0 !important;
 }
 
+/* Listas más visuales */
 .project-card-main ul {
   list-style: none;
   padding-left: 0;
@@ -161,6 +173,45 @@
   color: #fff;
 }
 
+/* Tabla Ant Design en tema oscuro */
+.project-card-main .ant-table {
+  background: transparent !important;
+  color: var(--project-text) !important;
+}
+
+.project-card-main .ant-table-thead > tr > th {
+  background: rgba(56, 189, 248, 0.12) !important;
+  color: var(--project-accent) !important;
+  border-bottom: 1px solid var(--project-glass-border) !important;
+  font-weight: 600;
+}
+
+.project-card-main .ant-table-tbody > tr > td {
+  border-bottom: 1px solid var(--project-glass-border) !important;
+  color: var(--project-text) !important;
+}
+
+.project-card-main .ant-table-tbody > tr:hover > td {
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Sub-cards (ADR, etc.) */
+.project-card-main .ant-card.ant-card-small {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid var(--project-glass-border) !important;
+  border-radius: 12px !important;
+  margin-bottom: 16px !important;
+}
+
+.project-card-main .ant-card.ant-card-small .ant-card-head {
+  color: var(--project-accent) !important;
+  border-bottom: 1px solid var(--project-glass-border) !important;
+}
+
+.project-card-main .ant-card.ant-card-small .ant-card-body {
+  padding: 16px !important;
+}
+
 .project-footer {
   text-align: center;
   padding: 20px 24px;
@@ -174,6 +225,40 @@
   box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Diagramas Mermaid */
+.mermaid-diagram-wrapper {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--project-glass-border);
+  margin: 16px 0 !important;
+}
+
+.mermaid-diagram-wrapper .mermaid-diagram {
+  display: flex;
+  justify-content: center;
+}
+
+.mermaid-diagram-wrapper .mermaid-diagram svg {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.mermaid-diagram-wrapper > div:first-child {
+  color: var(--project-text) !important;
+  margin-bottom: 12px;
+}
+
+.mermaid-fallback {
+  font-size: 12px;
+  overflow: auto;
+  margin: 0;
+  white-space: pre-wrap;
+  color: var(--project-text-muted);
+}
+
+/* Enlaces dentro del contenido */
 .project-card-main a {
   color: var(--project-accent) !important;
   text-decoration: none;

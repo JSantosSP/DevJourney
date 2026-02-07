@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout, Typography, Divider, Row, Col, Card } from 'antd';
 import Base from '../../Components/Base/Base';
 import './ProjectDescription.css';
+import { yearActual } from '../../Utils/constants';
 
 const { Title, Paragraph, Text } = Typography;
 const { Header, Content, Footer } = Layout;
@@ -14,7 +15,7 @@ const ProjectDescription = () => {
           <Title level={1}>Hangman Movie Game</Title>
         </Header>
         <Content className="project-content">
-          <Card className="project-card">
+          <Card className="project-card project-card-main">
             <Title level={2}>Project Description</Title>
             <Paragraph>
               This project is a web-based game where users try to guess movie titles using a Hangman-style game. The application consists of a frontend built with React and a backend developed using Python with FastAPI. The backend interacts with a MySQL database to fetch and store movie data. Below is a detailed explanation of the various components and their functionalities.
@@ -79,7 +80,7 @@ const ProjectDescription = () => {
             </Paragraph>
           </Card>
         </Content>
-        <Footer className="project-footer">Hangman Movie Game ©2024 Created by JSantosSP <a href='https://github.com/JSantosSP/API-Film'>Github</a></Footer>
+        <Footer className="project-footer">Hangman Movie Game ©{yearActual} Created by JSantosSP <a href='https://github.com/JSantosSP/API-Film'>Github</a></Footer>
       </Layout>
     </Base>
   );

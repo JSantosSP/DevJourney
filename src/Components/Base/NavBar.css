@@ -1,0 +1,56 @@
+.nav-bar-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-bar-menu {
+  flex: 1;
+  min-width: 0;
+  line-height: 46px;
+}
+
+/* About Me a la derecha: el ítem con marginLeft auto ya está en el JS */
+
+/* Selector de idioma como ítem del menú: desplegable integrado */
+.nav-bar-menu .nav-bar-lang-item.ant-menu-item {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+}
+
+.nav-bar-menu .nav-bar-lang-item.ant-menu-item:hover {
+  color: inherit;
+  background: transparent;
+}
+
+.nav-bar-lang-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: inherit;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-bar-lang-trigger:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+}
+
+.nav-bar-lang-label {
+  font-weight: 500;
+}
+
+.nav-bar-lang-chevron {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.nav-bar-lang-dropdown .ant-dropdown-trigger {
+  outline: none;
+}

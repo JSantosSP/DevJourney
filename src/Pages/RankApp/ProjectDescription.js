@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout, Typography, Divider, Row, Col, Card } from 'antd';
 import Base from '../../Components/Base/Base';
 import './ProjectDescription.css';
+import { yearActual } from '../../Utils/constants';
 
 const { Title, Paragraph, Text } = Typography;
 const { Header, Content, Footer } = Layout;
@@ -14,7 +15,7 @@ const ProjectDescription = () => {
           <Title level={1}>Ranking Management</Title>
         </Header>
         <Content className="project-content">
-          <Card className="project-card">
+          <Card className="project-card project-card-main">
             <Title level={2}>Project Description</Title>
             <Paragraph>
               This mobile app is designed to streamline the management of activities and rankings, offering a user-friendly platform for creating, viewing, and interacting with various activities and their associated rankings. Built with React Native, the app features a seamless and intuitive user interface for both creating new activities and managing rankings, providing a powerful tool for users to engage with and track their achievements. The backend, developed using Node.js and Express, ensures robust and scalable data management. Below is a detailed explanation of the various components and their functionalities.
@@ -88,7 +89,7 @@ const ProjectDescription = () => {
             </Paragraph>
           </Card>
         </Content>
-        <Footer className="project-footer">Activity and Ranking Management App ©2024 </Footer>
+        <Footer className="project-footer">Activity and Ranking Management App ©{yearActual} </Footer>
       </Layout>
     </Base>
   );

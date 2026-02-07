@@ -7,17 +7,18 @@ import ProfilePage from './Pages/Profile/ProfilePage';
 import ApiFilm from './Pages/ApiFilm/ApiFilm'
 import ApiFilmDescription from './Pages/ApiFilm/ProjectDescription'
 import RankAppDescription from './Pages/RankApp/ProjectDescription'
+import GestorCryptoDoc from './Pages/GestorCrypto/GestorCryptoDoc'
 
 function App() {
   return (
     <div>
       <Router>
         <Routes>
-          <Route exact path="/DevJourney/build" element={<HomePage/>}/>
+          <Route exact path="/DevJourney/build" element={<ProfilePage/>}/>
           <Route exact path="/DevJourney/build/contact" element={<ProfilePage/>}/>
-          <Route exact path="/DevJourney/build/apifilm" element={<ApiFilm/>}/>
-          <Route exact path="/DevJourney/build/apifilm/description" element={<ApiFilmDescription/>}/>
-          <Route exact path="/DevJourney/build/rankapp" element={<RankAppDescription/>}/>
+          {/* <Route exact path="/DevJourney/build/apifilm" element={<ApiFilmDescription/>}/>
+          <Route exact path="/DevJourney/build/rankapp" element={<RankAppDescription/>}/> */}
+          <Route exact path="/DevJourney/build/gestorcrypto" element={<GestorCryptoDoc/>}/>
         </Routes>
       </Router>
     </div>

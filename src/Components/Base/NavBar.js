@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { HomeOutlined, UserOutlined, EuroOutlined, GlobalOutlined, DownOutlined } from '@ant-design/icons';
+import { HomeOutlined, UserOutlined, EuroOutlined, GlobalOutlined, DownOutlined, MessageOutlined } from '@ant-design/icons';
 import { Menu, Dropdown } from 'antd';
 import { useLanguage } from '../../context/LanguageContext';
 import './NavBar.css';
@@ -18,6 +18,8 @@ const NavBar = () => {
       setCurrent('aboutme');
     } else if (path === '/DevJourney/build/gestorcrypto') {
       setCurrent('gestorcrypto');
+    } else if (path === '/DevJourney/build/chatylife') {
+      setCurrent('chatylife');
     }
   }, [location.pathname]);
 
@@ -51,6 +53,11 @@ const NavBar = () => {
       label: <Link to="/DevJourney/build/gestorcrypto">{t('nav.gestorCrypto')}</Link>,
       key: 'gestorcrypto',
       icon: <EuroOutlined />,
+    },
+    {
+      label: <Link to="/DevJourney/build/chatylife">{t('nav.chatyLife')}</Link>,
+      key: 'chatylife',
+      icon: <MessageOutlined />,
     },
     {
       label: <Link to="/DevJourney/build/contact">{t('nav.aboutMe')}</Link>,

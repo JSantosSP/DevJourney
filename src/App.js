@@ -8,6 +8,7 @@ import ApiFilm from './Pages/ApiFilm/ApiFilm'
 import ApiFilmDescription from './Pages/ApiFilm/ProjectDescription'
 import RankAppDescription from './Pages/RankApp/ProjectDescription'
 import GestorCryptoDoc from './Pages/GestorCrypto/GestorCryptoDoc'
+import ChatyLifeDoc from './Pages/ChatyLife/ChatyLifeDoc'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           {/* <Route exact path="/DevJourney/build/apifilm" element={<ApiFilmDescription/>}/>
           <Route exact path="/DevJourney/build/rankapp" element={<RankAppDescription/>}/> */}
           <Route exact path="/DevJourney/build/gestorcrypto" element={<GestorCryptoDoc/>}/>
+          <Route exact path="/DevJourney/build/chatylife" element={<ChatyLifeDoc/>}/>
         </Routes>
       </Router>
     </div>

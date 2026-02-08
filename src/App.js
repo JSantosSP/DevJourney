@@ -1,26 +1,26 @@
 import './App.css';
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import HomePage from './Pages/Home/HomePage';
 import ProfilePage from './Pages/Profile/ProfilePage';
-import ApiFilm from './Pages/ApiFilm/ApiFilm'
-import ApiFilmDescription from './Pages/ApiFilm/ProjectDescription'
-import RankAppDescription from './Pages/RankApp/ProjectDescription'
-import GestorCryptoDoc from './Pages/GestorCrypto/GestorCryptoDoc'
-import ChatyLifeDoc from './Pages/ChatyLife/ChatyLifeDoc'
+import ApiFilm from './Pages/ApiFilm/ApiFilm';
+import ApiFilmDescription from './Pages/ApiFilm/ProjectDescription';
+import RankAppDescription from './Pages/RankApp/ProjectDescription';
+import GestorCryptoDoc from './Pages/GestorCrypto/GestorCryptoDoc';
+import ChatyLifeDoc from './Pages/ChatyLife/ChatyLifeDoc';
+
+const basename = process.env.PUBLIC_URL || '';
 
 function App() {
   return (
-    <div>
-      <Router>
+    <div className="app-wrapper">
+      <Router basename={basename}>
         <Routes>
-          <Route exact path="/DevJourney/build" element={<ProfilePage/>}/>
-          <Route exact path="/DevJourney/build/contact" element={<ProfilePage/>}/>
-          {/* <Route exact path="/DevJourney/build/apifilm" element={<ApiFilmDescription/>}/>
-          <Route exact path="/DevJourney/build/rankapp" element={<RankAppDescription/>}/> */}
-          <Route exact path="/DevJourney/build/gestorcrypto" element={<GestorCryptoDoc/>}/>
-          <Route exact path="/DevJourney/build/chatylife" element={<ChatyLifeDoc/>}/>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/contact" element={<ProfilePage />} />
+          <Route path="/gestorcrypto" element={<GestorCryptoDoc />} />
+          <Route path="/chatylife" element={<ChatyLifeDoc />} />
         </Routes>
       </Router>
     </div>

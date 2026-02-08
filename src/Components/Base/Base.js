@@ -5,15 +5,13 @@ import ParticleBackground from './ParticleBackground';
 
 
 
-const Base = ({ children }) => {
-    return (
-        <div>
-            <NavBar />
-            <ParticleBackground/>
-            <main>{children}</main>
-            <Link to="/DevJourney/build/contact"><ButtonCV/></Link>
-        </div>
-    );
-};
+const Base = ({ children }) => (
+  <div className="base-layout">
+    <NavBar />
+    <ParticleBackground />
+    <main className="base-main">{children}</main>
+    <Link to="/contact"><ButtonCV /></Link>
+  </div>
+);
 
 export default Base;

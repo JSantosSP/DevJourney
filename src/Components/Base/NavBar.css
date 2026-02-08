@@ -2,12 +2,41 @@
   display: flex;
   align-items: center;
   width: 100%;
+  background: var(--bg-secondary, #12121a);
+  border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.06));
+  position: relative;
+  z-index: 100;
 }
 
 .nav-bar-menu {
   flex: 1;
   min-width: 0;
   line-height: 46px;
+  background: transparent !important;
+  color: var(--text-primary, #f0f0f5) !important;
+  border: none !important;
+}
+
+.nav-bar-menu.ant-menu-horizontal > .ant-menu-item,
+.nav-bar-menu.ant-menu-horizontal > .ant-menu-submenu {
+  color: var(--text-secondary, #a0a0b0);
+}
+
+.nav-bar-menu.ant-menu-horizontal > .ant-menu-item:hover,
+.nav-bar-menu.ant-menu-horizontal > .ant-menu-submenu:hover {
+  color: var(--text-primary, #f0f0f5) !important;
+}
+
+.nav-bar-menu.ant-menu-horizontal > .ant-menu-item-selected {
+  color: var(--accent-primary, #6366f1) !important;
+}
+
+.nav-bar-menu .ant-menu-item a {
+  color: inherit;
+}
+
+.nav-bar-menu .ant-menu-item a:hover {
+  color: inherit;
 }
 
 /* About Me a la derecha: el ítem con marginLeft auto ya está en el JS */

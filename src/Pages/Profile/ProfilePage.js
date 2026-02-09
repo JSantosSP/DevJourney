@@ -7,6 +7,8 @@ import './ProfilePage.css';
 
 const { Title, Paragraph } = Typography;
 
+const basePath = process.env.PUBLIC_URL || '';
+
 const ProfilePage = () => {
   const { t } = useLanguage();
 
@@ -15,7 +17,7 @@ const ProfilePage = () => {
       <div className="Profile-container">
         <Row justify="center" style={{ marginBottom: '20px' }}>
           <Col>
-            <Avatar size={150} src="/DevJourney/build/joseSantosBusto.jpeg" />
+            <Avatar size={150} src={`${basePath}/joseSantosBusto.jpeg`} />
           </Col>
         </Row>
         <Row justify="center">

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { HomeOutlined, UserOutlined, EuroOutlined, GlobalOutlined, DownOutlined } from '@ant-design/icons';
+import { HomeOutlined, UserOutlined, EuroOutlined, GlobalOutlined, DownOutlined, MessageOutlined } from '@ant-design/icons';
 import { Menu, Dropdown } from 'antd';
 import { useLanguage } from '../../context/LanguageContext';
 import './NavBar.css';
@@ -11,14 +11,13 @@ const NavBar = () => {
   const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
-    const path = location.pathname;
-    if (path === '/DevJourney/build') {
-      setCurrent('home');
-    } else if (path === '/DevJourney/build/contact') {
-      setCurrent('aboutme');
-    } else if (path === '/DevJourney/build/gestorcrypto') {
-      setCurrent('gestorcrypto');
-    }
+    const path = location.pathname.replace(/\/$/, '') || '/';
+    const base = (process.env.PUBLIC_URL || '').replace(/\/$/, '');
+    const normalized = base ? path.replace(base, '') || '/' : path;
+    if (normalized === '/' || normalized === '') setCurrent('home');
+    else if (normalized === '/contact') setCurrent('aboutme');
+    else if (normalized === '/gestorcrypto') setCurrent('gestorcrypto');
+    else if (normalized === '/chatylife') setCurrent('chatylife');
   }, [location.pathname]);
 
   const languageMenuItems = [
@@ -42,18 +41,11 @@ const NavBar = () => {
   );
 
   const items = [
+    { label: <Link to="/">{t('nav.home')}</Link>, key: 'home', icon: <HomeOutlined /> },
+    { label: <Link to="/gestorcrypto">{t('nav.gestorCrypto')}</Link>, key: 'gestorcrypto', icon: <EuroOutlined /> },
+    { label: <Link to="/chatylife">{t('nav.chatyLife')}</Link>, key: 'chatylife', icon: <MessageOutlined /> },
     {
-      label: <Link to="/DevJourney/build">{t('nav.home')}</Link>,
-      key: 'home',
-      icon: <HomeOutlined />,
-    },
-    {
-      label: <Link to="/DevJourney/build/gestorcrypto">{t('nav.gestorCrypto')}</Link>,
-      key: 'gestorcrypto',
-      icon: <EuroOutlined />,
-    },
-    {
-      label: <Link to="/DevJourney/build/contact">{t('nav.aboutMe')}</Link>,
+      label: <Link to="/contact">{t('nav.aboutMe')}</Link>,
       key: 'aboutme',
       icon: <UserOutlined />,
       style: { marginLeft: 'auto' },

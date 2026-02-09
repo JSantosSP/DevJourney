@@ -1,16 +1,36 @@
 .Profile-container {
-    text-align: center;
+  text-align: center;
+  padding: var(--space-section, 4rem) var(--space-inline, 1.5rem);
+  max-width: var(--container-max, 1100px);
+  margin: 0 auto;
+}
+
+.Profile-container .ant-typography {
+  color: var(--text-primary, #f0f0f5) !important;
+}
+
+.Profile-container .ant-divider {
+  border-color: var(--border-subtle, rgba(255, 255, 255, 0.06));
+}
+
+.Profile-container .large-icon {
+  color: var(--text-secondary, #a0a0b0);
+  transition: color 0.2s;
+}
+
+.Profile-container .large-icon:hover {
+  color: var(--accent-primary, #6366f1);
 }
 
 .Profile-image {
-    width: 200px;
-    border-radius: 50%;
+  width: 200px;
+  border-radius: 50%;
 }
 
 .contact-form {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .large-icon {
-    font-size: 32px;
+  font-size: 32px;
 }

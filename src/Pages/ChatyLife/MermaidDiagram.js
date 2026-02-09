@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 /**
  * Renderiza un diagrama Mermaid a partir de una cadena de código.
@@ -42,7 +42,7 @@ const MermaidDiagram = ({ chart, title }) => {
   }, [chart, id]);
 
   return (
-    <div className="mermaid-diagram-wrapper" style={{ margin: '16px 0', overflow: 'auto', backgroundColor:'white' }}>
+    <div className="mermaid-diagram-wrapper" style={{ margin: '16px 0', overflow: 'auto', backgroundColor:'white'}}>
       {error && <div style={{ color: '#cf1322', fontSize: 12, marginBottom: 4 }}>{error}</div>}
       <div ref={containerRef} className="mermaid-diagram" />
     </div>

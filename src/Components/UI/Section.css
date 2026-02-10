@@ -1,6 +1,7 @@
 .dj-section {
   padding-top: var(--space-section);
   padding-bottom: var(--space-section);
+  text-align: justify;
 }
 
 .dj-section__inner {

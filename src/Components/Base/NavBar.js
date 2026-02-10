@@ -15,7 +15,6 @@ const NavBar = () => {
     const base = (process.env.PUBLIC_URL || '').replace(/\/$/, '');
     const normalized = base ? path.replace(base, '') || '/' : path;
     if (normalized === '/' || normalized === '') setCurrent('home');
-    else if (normalized === '/contact') setCurrent('aboutme');
     else if (normalized === '/gestorcrypto') setCurrent('gestorcrypto');
     else if (normalized === '/chatylife') setCurrent('chatylife');
     else if (normalized === '/pocketmind') setCurrent('pocketmind');
@@ -47,15 +46,10 @@ const NavBar = () => {
     { label: <Link to="/chatylife">{t('nav.chatyLife')}</Link>, key: 'chatylife', icon: <MessageOutlined /> },
     { label: <Link to="/pocketmind">{t('nav.pocketMind')}</Link>, key: 'pocketmind', icon: <WalletOutlined /> },
     {
-      label: <Link to="/contact">{t('nav.aboutMe')}</Link>,
-      key: 'aboutme',
-      icon: <UserOutlined />,
-      style: { marginLeft: 'auto' },
-    },
-    {
       key: 'lang',
       label: languageSelector,
       className: 'nav-bar-lang-item',
+      style: { marginLeft: 'auto' }
     },
   ];
 

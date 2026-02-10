@@ -5,8 +5,8 @@ import { Section, Button, Card, Tag } from '../../Components/UI';
 import { useLanguage } from '../../context/LanguageContext';
 import './HomePage.css';
 
-const TECH_CORE = ['Node.js', 'React', 'JavaScript'];
-const TECH_ADDITIONAL = ['C#', 'Python', 'SQL'];
+const TECH_CORE = ['Node.js', 'React', 'JavaScript', 'TypeScript', 'Java'];
+const TECH_ADDITIONAL = ['C#', 'C++', 'Python', 'SQL', 'MongoDB', 'Docker'];
 const TRAIT_KEYS = ['curious', 'analytical', 'responsible', 'methodical', 'professional', 'selfDriven'];
 const TIMELINE_LENGTH = 5;
 
@@ -21,7 +21,7 @@ function HomePage() {
   }, []);
 
   const basePath = process.env.PUBLIC_URL || '';
-  const photoSrc = `${basePath}/joseSantosBusto.jpeg`;
+  const photoSrc = `${basePath}/joseSantosBusto.jpg`;
 
   return (
     <Base>
@@ -36,8 +36,8 @@ function HomePage() {
                   src={photoSrc}
                   alt="Jose Miguel Santos Palomera"
                   className="home-hero__photo"
-                  width={200}
-                  height={200}
+                  width={400}
+                  height={400}
                 />
               </div>
               <h1 className="home-hero__name">Jose Miguel Santos Palomera</h1>
@@ -45,11 +45,16 @@ function HomePage() {
               <p className="home-hero__desc">{t('home.heroDesc')}</p>
               <p className="home-hero__tagline">{t('home.heroTagline')}</p>
               <div className="home-hero__cta">
-                <Button to="/#projects" variant="primary" size="large">
+                <Button 
+                  onClick={() => {
+                              document.getElementById('projects')?.scrollIntoView({ 
+                              behavior: 'smooth',
+                              block: 'start'
+                            });
+                          }} 
+                  variant="primary" 
+                  size="large">
                   {t('home.ctaViewProjects')}
-                </Button>
-                <Button to="/contact" variant="secondary" size="large">
-                  {t('home.ctaContactMe')}
                 </Button>
               </div>
             </div>
@@ -132,6 +137,10 @@ function HomePage() {
               <span className="home-projects__name">{t('home.projectChatyName')}</span>
               <span className="home-projects__desc">{t('home.projectChatyDesc')}</span>
             </Link>
+            <Link to="/pocketmind" className="home-projects__card">
+              <span className="home-projects__name">{t('home.projectPocketName')}</span>
+              <span className="home-projects__desc">{t('home.projectPocketDesc')}</span>
+            </Link>
           </div>
         </Section>
 
@@ -141,16 +150,16 @@ function HomePage() {
             <h2 className="home-cta__title">{t('home.ctaTitle')}</h2>
             <p className="home-cta__text">{t('home.ctaText')}</p>
             <div className="home-cta__actions">
-              <Button to="/#projects" variant="primary" size="large">
-                {t('home.ctaViewProjects')}
-              </Button>
               <Link to="/gestorcrypto" className="dj-btn dj-btn--secondary dj-btn--large">
                 {t('nav.gestorCrypto')}
               </Link>
               <Link to="/chatylife" className="dj-btn dj-btn--secondary dj-btn--large">
                 {t('nav.chatyLife')}
               </Link>
-              <Button to="/contact" variant="secondary" size="large">
+              <Link to="/pocketmind" className="dj-btn dj-btn--secondary dj-btn--large">
+                {t('nav.pocketMind')}
+              </Link>
+              <Button to="mailto:jsantospalomera@gmail.com" variant="secondary" size="large">
                 {t('home.ctaContactMe')}
               </Button>
             </div>

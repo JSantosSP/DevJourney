@@ -10,7 +10,7 @@ const Base = ({ children }) => (
     <NavBar />
     <ParticleBackground />
     <main className="base-main">{children}</main>
-    <Link to="/contact"><ButtonCV /></Link>
+    <Link to="/"><ButtonCV /></Link>
   </div>
 );
 

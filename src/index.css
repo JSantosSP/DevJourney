@@ -47,7 +47,7 @@
   --space-block: clamp(1.5rem, 3vw, 2.5rem);
   --space-inline: clamp(1rem, 2vw, 1.5rem);
   --container-max: 1100px;
-  --container-narrow: 720px;
+  --container-narrow: 820px;
 
   /* Motion */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);

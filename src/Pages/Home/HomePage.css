@@ -40,7 +40,7 @@
 }
 
 .home-hero__content {
-  max-width: 640px;
+  max-width: 840px;
   margin: 0 auto;
 }
 
@@ -49,10 +49,10 @@
 }
 
 .home-hero__photo {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 189px;
+  height: 249px;
+  border-radius: 30%;
+  object-fit: contain;
   border: 3px solid var(--border-accent);
   box-shadow: 0 0 40px var(--accent-glow);
   transition: transform var(--duration-normal) var(--ease-out);

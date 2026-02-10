@@ -9,6 +9,7 @@ import ApiFilmDescription from './Pages/ApiFilm/ProjectDescription';
 import RankAppDescription from './Pages/RankApp/ProjectDescription';
 import GestorCryptoDoc from './Pages/GestorCrypto/GestorCryptoDoc';
 import ChatyLifeDoc from './Pages/ChatyLife/ChatyLifeDoc';
+import PocketMindDoc from './Pages/PocketMind/PocketMindDoc';
 
 const basename = process.env.PUBLIC_URL || '';
 
@@ -18,9 +19,9 @@ function App() {
       <Router basename={basename}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/contact" element={<ProfilePage />} />
           <Route path="/gestorcrypto" element={<GestorCryptoDoc />} />
           <Route path="/chatylife" element={<ChatyLifeDoc />} />
+          <Route path="/pocketmind" element={<PocketMindDoc />} />
         </Routes>
       </Router>
     </div>

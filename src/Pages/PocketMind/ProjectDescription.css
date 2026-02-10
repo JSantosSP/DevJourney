@@ -1,0 +1,267 @@
+/* Reutiliza el mismo estilo visual que otras páginas de proyecto */
+.project-layout {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  --project-glass: rgba(15, 23, 42, 0.72);
+  --project-glass-border: rgba(255, 255, 255, 0.1);
+  --project-accent: #38bdf8;
+  --project-accent-soft: rgba(56, 189, 248, 0.25);
+  --project-text: #e2e8f0;
+  --project-text-muted: #94a3b8;
+}
+
+.project-header.ant-layout-header {
+  height: auto;
+  min-height: auto;
+  line-height: normal;
+}
+
+.project-header {
+  background: var(--project-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--project-glass-border);
+  text-align: center;
+  padding: 32px 24px 28px;
+  margin: 0 20px;
+  margin-top: 16px;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+}
+
+.project-header .ant-typography {
+  color: var(--project-text) !important;
+}
+
+.project-header .ant-typography.ant-typography-secondary {
+  color: var(--project-text-muted) !important;
+  font-size: 0.95rem;
+}
+
+.project-header h1.ant-typography {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px !important;
+  padding: 0.15em 0;
+  line-height: 1.4;
+  background: linear-gradient(135deg, #fff 0%, var(--project-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  overflow: visible;
+  min-height: 1.4em;
+}
+
+.project-header .project-page-title {
+  display: block;
+  margin-bottom: 8px !important;
+}
+
+.project-header .project-page-subtitle {
+  margin-bottom: 0 !important;
+  margin-top: 4px;
+}
+
+.project-content {
+  margin: 20px 20px 24px;
+  padding: 0;
+}
+
+.project-card-main {
+  margin-bottom: 0 !important;
+  background: var(--project-glass) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--project-glass-border) !important;
+  border-radius: 0 0 16px 16px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.03) inset !important;
+  overflow: hidden;
+}
+
+.project-card-main .ant-card {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid var(--project-glass-border) !important;
+  border-radius: 12px !important;
+}
+
+.project-card-main .ant-card .ant-card-head {
+  color: var(--project-accent) !important;
+  border-bottom: 1px solid var(--project-glass-border) !important;
+}
+
+.project-card-main > .ant-card-body {
+  padding: 32px 40px 40px !important;
+  color: var(--project-text);
+}
+
+.project-card-main .ant-card .ant-card-body {
+  padding: 16px !important;
+}
+
+.project-card-main .ant-card-body .ant-typography {
+  color: var(--project-text) !important;
+}
+
+.project-card-main h2.ant-typography {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.35rem !important;
+  margin-top: 8px !important;
+  margin-bottom: 20px !important;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--project-accent-soft);
+  display: inline-block;
+}
+
+.project-card-main h3.ant-typography,
+.project-card-main h4.ant-typography {
+  color: var(--project-text) !important;
+  font-weight: 600;
+  font-size: 1.05rem !important;
+  margin-top: 24px !important;
+  margin-bottom: 10px !important;
+  padding-left: 12px;
+  border-left: 3px solid var(--project-accent);
+}
+
+.project-card-main .ant-typography.ant-typography-secondary {
+  color: var(--project-text-muted) !important;
+}
+
+.project-card-main p.ant-typography {
+  line-height: 1.75;
+  margin-bottom: 14px;
+  color: rgba(226, 232, 240, 0.95) !important;
+}
+
+.project-card-main .ant-divider {
+  border-color: var(--project-glass-border) !important;
+  margin: 28px 0 !important;
+}
+
+.project-card-main ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0 20px;
+}
+
+.project-card-main ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  line-height: 1.65;
+  color: var(--project-text);
+}
+
+.project-card-main ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  background: var(--project-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--project-accent-soft);
+}
+
+.project-card-main ul li strong {
+  color: #fff;
+}
+
+.project-card-main .ant-table {
+  background: transparent !important;
+  color: var(--project-text) !important;
+}
+
+.project-card-main .ant-table-thead > tr > th {
+  background: rgba(56, 189, 248, 0.12) !important;
+  color: var(--project-accent) !important;
+  border-bottom: 1px solid var(--project-glass-border) !important;
+  font-weight: 600;
+}
+
+.project-card-main .ant-table-tbody > tr > td {
+  border-bottom: 1px solid var(--project-glass-border) !important;
+  color: var(--project-text) !important;
+}
+
+.project-card-main .ant-table-tbody > tr:hover > td {
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.project-card-main .ant-card.ant-card-small {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid var(--project-glass-border) !important;
+  border-radius: 12px !important;
+  margin-bottom: 16px !important;
+}
+
+.project-card-main .ant-card.ant-card-small .ant-card-head {
+  color: var(--project-accent) !important;
+  border-bottom: 1px solid var(--project-glass-border) !important;
+}
+
+.project-card-main .ant-card.ant-card-small .ant-card-body {
+  padding: 16px !important;
+}
+
+.project-footer {
+  text-align: center;
+  padding: 20px 24px;
+  color: var(--project-text-muted) !important;
+  font-size: 0.9rem;
+  background: var(--project-glass);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--project-glass-border);
+  margin: 0 20px 20px;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.15);
+}
+
+.mermaid-diagram-wrapper {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--project-glass-border);
+  margin: 16px 0 !important;
+}
+
+.mermaid-diagram-wrapper .mermaid-diagram {
+  display: flex;
+  justify-content: center;
+}
+
+.mermaid-diagram-wrapper .mermaid-diagram svg {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.mermaid-diagram-wrapper > div:first-child {
+  color: var(--project-text) !important;
+  margin-bottom: 12px;
+}
+
+.mermaid-fallback {
+  font-size: 12px;
+  overflow: auto;
+  margin: 0;
+  white-space: pre-wrap;
+  color: var(--project-text-muted);
+}
+
+.project-card-main a {
+  color: var(--project-accent) !important;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+
+.project-card-main a:hover {
+  border-bottom-color: var(--project-accent);
+  opacity: 0.9;
+}
+

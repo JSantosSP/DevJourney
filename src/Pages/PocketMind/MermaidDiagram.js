@@ -42,7 +42,10 @@ const MermaidDiagram = ({ chart, title }) => {
   }, [chart, id]);
 
   return (
-    <div className="mermaid-diagram-wrapper" style={{ margin: '16px 0', overflow: 'auto' }}>
+    <div
+      className="mermaid-diagram-wrapper"
+      style={{ margin: '16px 0', overflow: 'auto', backgroundColor: 'white' }}
+    >
       {title && <div style={{ marginBottom: 8, fontWeight: 600 }}>{title}</div>}
       {error && <div style={{ color: '#cf1322', fontSize: 12, marginBottom: 4 }}>{error}</div>}
       <div ref={containerRef} className="mermaid-diagram" />
@@ -51,3 +54,4 @@ const MermaidDiagram = ({ chart, title }) => {
 };
 
 export default MermaidDiagram;
+

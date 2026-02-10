@@ -132,6 +132,10 @@ function HomePage() {
               <span className="home-projects__name">{t('home.projectChatyName')}</span>
               <span className="home-projects__desc">{t('home.projectChatyDesc')}</span>
             </Link>
+            <Link to="/pocketmind" className="home-projects__card">
+              <span className="home-projects__name">{t('home.projectPocketName')}</span>
+              <span className="home-projects__desc">{t('home.projectPocketDesc')}</span>
+            </Link>
           </div>
         </Section>
 
@@ -149,6 +153,9 @@ function HomePage() {
               </Link>
               <Link to="/chatylife" className="dj-btn dj-btn--secondary dj-btn--large">
                 {t('nav.chatyLife')}
+              </Link>
+              <Link to="/pocketmind" className="dj-btn dj-btn--secondary dj-btn--large">
+                {t('nav.pocketMind')}
               </Link>
               <Button to="/contact" variant="secondary" size="large">
                 {t('home.ctaContactMe')}

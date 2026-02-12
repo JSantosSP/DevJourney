@@ -205,10 +205,10 @@ const diagramNotificationDecision = `flowchart TD
     A[Nuevo mensaje en Firestore] --> B[Cloud Function trigger]
     B --> C{Receptor tiene FCM token?}
     C -->|No| D[Fin - no notificación]
-    C -->|Sí| E{Receptor en activeChats para este chat?}
+    C -->|Sí| E{Receptor en activeChats\n para este chat?}
     E -->|Sí| D
     E -->|No| F[Enviar notificación push]
-    F --> G[Usuario recibe en dispositivo]`;
+    F --> G[Usuario recibe\n en dispositivo]`;
 
 const ChatyLifeDoc = () => {
   const { t } = useLanguage();
@@ -388,11 +388,10 @@ const ChatyLifeDoc = () => {
               <li>{t('chaty.future6')} </li>
             </ul>
           </Card>
-
-          <Footer className="project-footer">
-            {t('chaty.footer', { year: yearActual })}
-          </Footer>
         </Content>
+        <Footer className="project-footer">
+          {t('chaty.footer', { year: yearActual })}
+        </Footer>
       </Layout>
     </Base>
   );

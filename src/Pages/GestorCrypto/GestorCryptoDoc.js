@@ -193,8 +193,8 @@ const diagramBalanceFlow = `flowchart LR
     E --> F[JSON response]`;
 
 const diagramTaxFlow = `flowchart TD
-    A["GET /api/wallets/:id/tax"] --> B["TaxService.computeRealizedGains"]
-    B --> C["listByWalletForTaxWithTransactions"]
+    A["GET /api/wallets/:id/tax"] --> B["TaxService.\ncomputeRealizedGains"]
+    B --> C["listByWalletForTax\nWithTransactions"]
     C --> D["Ordenar operaciones time ASC"]
     D --> E{"Patrón?"}
     E -->|"Compra EUR→crypto"| F["Añadir lote"]
@@ -203,7 +203,7 @@ const diagramTaxFlow = `flowchart TD
     F --> D
     G --> I["realized[]"]
     H --> I
-    I --> J["totalGain, totalLoss, netGainLoss"]`;
+    I --> J["totalGain, totalLoss, \nnetGainLoss"]`;
 
 const GestorCryptoDoc = () => {
   const { t } = useLanguage();

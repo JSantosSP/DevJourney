@@ -141,6 +141,10 @@ function HomePage() {
               <span className="home-projects__name">{t('home.projectPocketName')}</span>
               <span className="home-projects__desc">{t('home.projectPocketDesc')}</span>
             </Link>
+            <Link to="/duochallenge" className="home-projects__card">
+              <span className="home-projects__name">DuoChallenge</span>
+              <span className="home-projects__desc">Juego de retos personalizados para parejas (fullstack)</span>
+            </Link>
           </div>
         </Section>
 
@@ -158,6 +162,9 @@ function HomePage() {
               </Link>
               <Link to="/pocketmind" className="dj-btn dj-btn--secondary dj-btn--large">
                 {t('nav.pocketMind')}
+              </Link>
+              <Link to="/duochallenge" className="dj-btn dj-btn--secondary dj-btn--large">
+                DuoChallenge
               </Link>
               <Button to="mailto:jsantospalomera@gmail.com" variant="secondary" size="large">
                 {t('home.ctaContactMe')}

@@ -95,11 +95,11 @@ const diagramDomain = `classDiagram
     User "1" --> "many" GameShare`;
 
 const diagramC4Context = `flowchart LR
-    userPlayer[Usuario jugador\\nApp móvil]
-    userAdmin[Usuario admin\\nBackoffice web]
+    userPlayer[Usuario jugador\nApp móvil]
+    userAdmin[Usuario admin\nBackoffice web]
 
     subgraph DuoChallenge[Sistema DuoChallenge]
-      backend[(API Backend\\nNode.js/Express)]
+      backend[(API Backend\nNode.js/Express)]
     end
 
     db[(MongoDB)]
@@ -110,15 +110,15 @@ const diagramC4Context = `flowchart LR
 
 const diagramC4Containers = `flowchart TB
     subgraph ClientSide[Frontends]
-      mobile[App móvil\\nReact Native + Expo]
-      backoffice[Backoffice web\\nReact + Vite]
+      mobile[App móvil\nReact Native + Expo]
+      backoffice[Backoffice web\nReact + Vite]
     end
 
     subgraph ServerSide[Backend]
-      api[(API REST\\nNode.js + Express)]
+      api[(API REST\nNode.js + Express)]
     end
 
-    db[(MongoDB\\nMongoose)]
+    db[(MongoDB\nMongoose)]
 
     mobile -->|Axios / HTTPS| api
     backoffice -->|Axios / HTTPS| api
@@ -126,12 +126,12 @@ const diagramC4Containers = `flowchart TB
 
 const diagramC4Components = `flowchart LR
     subgraph API_Backend[API Backend Node.js]
-      routes[Routes\\nExpress Router]
-      controllers[Controllers\\nauth, game, prize, share...]
-      services[Services\\nGameSetService, LevelService, PrizeService]
-      models[Models\\nMongoose Schemas]
-      middlewares[Middlewares\\nauth, upload]
-      utils[Utils\\nhash, seed]
+      routes[Routes\nExpress Router]
+      controllers[Controllers\nauth, game, prize, share...]
+      services[Services\nGameSetService, LevelService, PrizeService]
+      models[Models\nMongoose Schemas]
+      middlewares[Middlewares\nauth, upload]
+      utils[Utils\nhash, seed]
     end
 
     db[(MongoDB)]
@@ -243,13 +243,13 @@ const diagramFlowGameSet = `sequenceDiagram
 const diagramFlowShare = `flowchart TD
     A[Usuario A crea juego] --> B[Backend genera GameSet]
     B --> C[Usuario A solicita compartir]
-    C --> D[Backend crea GameShare\\ncódigo + maxUses + expiresAt]
-    D --> E[Usuario A comparte código con B]
+    C --> D[Backend crea GameShare\ncódigo + maxUses + \nexpiresAt]
+    D --> E[Usuario A comparte\n código con B]
 
-    E --> F[Usuario B introduce código en app]
-    F --> G[Backend valida código\\nno expirado, usos disponibles]
-    G --> H[Si válido, asocia B al GameSet\\no crea copia vinculada]
-    H --> I[Usuario B juega el GameSet compartido]`;
+    E --> F[Usuario B introduce\n código en app]
+    F --> G[Backend valida código\nno expirado,\n usos disponibles]
+    G --> H[Si válido, asocia B al\n GameSet o crea \ncopia vinculada]
+    H --> I[Usuario B juega \nel GameSet compartido]`;
 
 const DuoChallengeDoc = () => {
   const { t } = useLanguage();

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { HomeOutlined, UserOutlined, EuroOutlined, GlobalOutlined, DownOutlined, MessageOutlined, WalletOutlined } from '@ant-design/icons';
+import { HomeOutlined, EuroOutlined, GlobalOutlined, DownOutlined, MessageOutlined, WalletOutlined, HeartOutlined } from '@ant-design/icons';
 import { Menu, Dropdown } from 'antd';
 import { useLanguage } from '../../context/LanguageContext';
 import './NavBar.css';
@@ -18,6 +18,7 @@ const NavBar = () => {
     else if (normalized === '/gestorcrypto') setCurrent('gestorcrypto');
     else if (normalized === '/chatylife') setCurrent('chatylife');
     else if (normalized === '/pocketmind') setCurrent('pocketmind');
+    else if (normalized === '/duochallenge') setCurrent('duochallenge');
   }, [location.pathname]);
 
   const languageMenuItems = [
@@ -45,6 +46,7 @@ const NavBar = () => {
     { label: <Link to="/gestorcrypto">{t('nav.gestorCrypto')}</Link>, key: 'gestorcrypto', icon: <EuroOutlined /> },
     { label: <Link to="/chatylife">{t('nav.chatyLife')}</Link>, key: 'chatylife', icon: <MessageOutlined /> },
     { label: <Link to="/pocketmind">{t('nav.pocketMind')}</Link>, key: 'pocketmind', icon: <WalletOutlined /> },
+    { label: <Link to="/duochallenge">DuoChallenge</Link>, key: 'duochallenge', icon: <HeartOutlined /> },
     {
       key: 'lang',
       label: languageSelector,

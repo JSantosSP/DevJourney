@@ -4,7 +4,8 @@
   width: 100%;
   background: var(--bg-secondary, #12121a);
   border-bottom: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.06));
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 100;
 }
 

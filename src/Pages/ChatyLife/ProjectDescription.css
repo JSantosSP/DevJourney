@@ -176,6 +176,7 @@
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.9em;
+  white-space: nowrap;
 }
 
 .project-card-main .ant-table {

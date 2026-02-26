@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { HomeOutlined, EuroOutlined, GlobalOutlined, DownOutlined, MessageOutlined, WalletOutlined, HeartOutlined } from '@ant-design/icons';
+import { HomeOutlined, EuroOutlined, GlobalOutlined, DownOutlined, MessageOutlined, WalletOutlined, HeartOutlined, BulbOutlined } from '@ant-design/icons';
 import { Menu, Dropdown } from 'antd';
 import { useLanguage } from '../../context/LanguageContext';
 import './NavBar.css';
@@ -19,6 +19,7 @@ const NavBar = () => {
     else if (normalized === '/chatylife') setCurrent('chatylife');
     else if (normalized === '/pocketmind') setCurrent('pocketmind');
     else if (normalized === '/duochallenge') setCurrent('duochallenge');
+    else if (normalized === '/aitasks') setCurrent('aitasks');
   }, [location.pathname]);
 
   const languageMenuItems = [
@@ -47,6 +48,7 @@ const NavBar = () => {
     { label: <Link to="/chatylife">{t('nav.chatyLife')}</Link>, key: 'chatylife', icon: <MessageOutlined /> },
     { label: <Link to="/pocketmind">{t('nav.pocketMind')}</Link>, key: 'pocketmind', icon: <WalletOutlined /> },
     { label: <Link to="/duochallenge">DuoChallenge</Link>, key: 'duochallenge', icon: <HeartOutlined /> },
+    { label: <Link to="/aitasks">{t('nav.aiTasks')}</Link>, key: 'aitasks', icon: <BulbOutlined /> },
     {
       key: 'lang',
       label: languageSelector,

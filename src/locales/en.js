@@ -4,6 +4,7 @@ export default {
     gestorCrypto: 'Crypto Manager',
     chatyLife: 'ChatyLife',
     pocketMind: 'pocketMind',
+    aiTasks: 'AI Tasks',
     aboutMe: 'About Me',
   },
   profile: {
@@ -65,6 +66,8 @@ export default {
     projectChatyDesc: 'Real-time messaging · Flutter + Firebase',
     projectPocketName: 'pocketMind',
     projectPocketDesc: 'Personal finance management · Offline-first mobile app',
+    projectAiTasksName: 'AI Tasks',
+    projectAiTasksDesc: 'NestJS + local AI + RAG · Backlog and Trello/Taiga board generation',
     ctaTitle: 'Interested in working together or learning more about my work?',
     ctaText: 'Explore my projects or get in touch.',
   },

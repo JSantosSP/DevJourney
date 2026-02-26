@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/DevJourney/build/static/css/main.b87edda0.css",
-    "main.js": "/DevJourney/build/static/js/main.8fec0de0.js",
+    "main.css": "/DevJourney/build/static/css/main.74ba43a1.css",
+    "main.js": "/DevJourney/build/static/js/main.150ff9f9.js",
     "static/js/732.996df54e.chunk.js": "/DevJourney/build/static/js/732.996df54e.chunk.js",
     "static/js/453.c1179d7f.chunk.js": "/DevJourney/build/static/js/453.c1179d7f.chunk.js",
     "static/js/448.e43caff0.chunk.js": "/DevJourney/build/static/js/448.e43caff0.chunk.js",
@@ -46,8 +46,8 @@
     "static/js/491.4ac130b4.chunk.js": "/DevJourney/build/static/js/491.4ac130b4.chunk.js",
     "static/js/449.bd434fb1.chunk.js": "/DevJourney/build/static/js/449.bd434fb1.chunk.js",
     "index.html": "/DevJourney/build/index.html",
-    "main.b87edda0.css.map": "/DevJourney/build/static/css/main.b87edda0.css.map",
-    "main.8fec0de0.js.map": "/DevJourney/build/static/js/main.8fec0de0.js.map",
+    "main.74ba43a1.css.map": "/DevJourney/build/static/css/main.74ba43a1.css.map",
+    "main.150ff9f9.js.map": "/DevJourney/build/static/js/main.150ff9f9.js.map",
     "732.996df54e.chunk.js.map": "/DevJourney/build/static/js/732.996df54e.chunk.js.map",
     "453.c1179d7f.chunk.js.map": "/DevJourney/build/static/js/453.c1179d7f.chunk.js.map",
     "448.e43caff0.chunk.js.map": "/DevJourney/build/static/js/448.e43caff0.chunk.js.map",
@@ -86,7 +86,7 @@
     "449.bd434fb1.chunk.js.map": "/DevJourney/build/static/js/449.bd434fb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b87edda0.css",
-    "static/js/main.8fec0de0.js"
+    "static/css/main.74ba43a1.css",
+    "static/js/main.150ff9f9.js"
   ]
 }
